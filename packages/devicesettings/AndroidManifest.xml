@@ -16,7 +16,6 @@
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
 
     <protected-broadcast android:name="devicesettings.intent.action.dcdimming_setting_changed" />
-    <protected-broadcast android:name="devicesettings.intent.action.dirac_setting_changed" />
     <protected-broadcast android:name="devicesettings.intent.action.hbm_setting_changed" />
     <protected-broadcast android:name="devicesettings.intent.action.kprofile_setting_changed" />
 
@@ -85,42 +84,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".dirac.DiracActivity"
-            android:label="@string/dirac_title"
-            android:exported="true"
-            android:theme="@style/Theme.SubSettingsBase">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity 
-            android:name=".dirac.DiracSettingsFragment"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="devicesettings.intent.action.dirac_setting_changed" />
-            </intent-filter>
-        </activity>
-
-        <service
-            android:name=".dirac.DiracTileService"
-            android:exported="true"
-            android:icon="@drawable/ic_sound"
-            android:label="@string/dirac_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="devicesettings.intent.action.dirac_setting_changed" />
-            </intent-filter>
-            <meta-data
-                android:name="android.service.quicksettings.TOGGLEABLE_TILE"
-                android:value="true" />
-        </service>
 
         <activity
             android:name=".speaker.ClearSpeakerActivity" 

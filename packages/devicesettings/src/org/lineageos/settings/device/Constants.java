@@ -6,8 +6,6 @@ public class Constants {
     /* Intent Actions and Extras */
     public static final String ACTION_DCDIMMING_SETTING_CHANGED = "devicesettings.intent.action.dcdimming_setting_changed";
     public static final String DCDIMMING_STATE = "devicesettings.extra.dcdimming.STATE";
-    public static final String ACTION_DIRAC_SETTING_CHANGED = "devicesettings.intent.action.dirac_setting_changed";
-    public static final String DIRAC_STATE = "devicesettings.extra.dirac.STATE";
     public static final String ACTION_HBM_SETTING_CHANGED = "devicesettings.intent.action.hbm_setting_changed";
     public static final String HBM_STATE = "devicesettings.extra.hbm.STATE";
     public static final String ACTION_KPROFILE_SETTING_CHANGED = "devicesettings.intent.action.kprofile_setting_changed";
@@ -34,23 +32,7 @@ public class Constants {
     public static final String MICROPHONE_GAIN_NODE = "/sys/kernel/sound_control/mic_gain";
     public static final String KEY_SPEAKER_GAIN = "speaker_gain";
     public static final String SPEAKER_GAIN_NODE = "/sys/kernel/sound_control/speaker_gain";
-    
-    /* Mi Sound Enhancer */
-    public static final String KEY_DIRAC_HEADSET = "dirac_headset_pref";
-    public static final String KEY_DIRAC_HIFI = "dirac_hifi_pref";
-    public static final String KEY_DIRAC_PRESET = "dirac_preset_pref";
-    public static final String KEY_DIRAC_SCENE = "dirac_scenario_pref";
-    public static final String KEY_DIRAC_ENABLE = "dirac_enable_pref";
 
-    public static final int DIRACSOUND_PARAM_HEADSET_TYPE = 1;
-    public static final int DIRACSOUND_PARAM_EQ_LEVEL = 2;
-    public static final int DIRACSOUND_PARAM_MUSIC = 4;
-    public static final int DIRACSOUND_PARAM_SCENE = 15;
-    public static final int DIRACSOUND_PARAM_HIFI = 8;
-
-    public static final UUID EFFECT_TYPE_DIRACSOUND =
-            UUID.fromString("5b8e36a5-144a-4c38-b1d7-0002a5d5c51b");
-    
     /* Flashlight Brightness Settings */
     public static final String KEY_FLASHLIGHT_BRIGHTNESS = "flashlight_brightness_pref";
     public static final String FLASHLIGHT_BRIGHTNESS_NODE = "/sys/class/leds/led:torch_0/max_brightness";
@@ -152,7 +134,6 @@ public class Constants {
     public static final String USB_FASTCHARGE_NODE = "/sys/kernel/fast_charge/force_fast_charge";
 
     /* Tile Entry Activity */
-    public static final String DIRAC_TILE = "org.lineageos.settings.device.dirac.DiracTileService";
     public static final String KPROFILES_MODES_TILE = "org.lineageos.settings.device.kprofiles.KProfilesModesTileService";
     public static final String HBM_TILE = "org.lineageos.settings.device.hbm.HBMModeTileService";
     public static final String DCDIMMING_TILE = "org.lineageos.settings.device.DcDimmingTileService";

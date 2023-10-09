@@ -35,7 +35,6 @@ import org.lineageos.settings.device.thermal.ThermalUtils;
 import org.lineageos.settings.device.audioamplification.AudioAmplificationUtils;
 
 import org.lineageos.settings.device.Constants;
-import org.lineageos.settings.device.dirac.DiracUtils;
 import org.lineageos.settings.device.utils.DisplayUtils;
 import org.lineageos.settings.device.utils.FileUtils;
 import org.lineageos.settings.device.utils.KcalUtils;
@@ -58,11 +57,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
-        try {
-            DiracUtils.getInstance(context);
-        } catch (Exception e) {
-            Log.d(TAG, "Dirac is not present in system");
-        }
         HapticUtils.restoreLevel(context);
         FlashlightUtils.restoreBrightness(context);
         ThermalUtils.startService(context);
