@@ -14,4 +14,5 @@
 
 <resources>
         <color name="material_primary">@*android:color/primary_material_light</color>
+        <color name="ic_launcher_background">#00FFFFFF</color>
 </resources>
