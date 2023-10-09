@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018 The LineageOS Project
+     Copyright (C) 2022 CannedShroud
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="device_settings_title">Настройки устройства</string>
+    <string name="device_settings_summary">Настройка отдельных аспектов устройства</string>
+
+    <!-- Refresh Rate Tile -->
+    <string name="refresh_rate_title">Частота обновления</string>
+    
+    <!-- FPS Counter -->
+    <string name="fps_info_title">Счетчик FPS</string>
+
+    <string name="display_title">Отображение</string>
+
+    <!-- DC Dimming -->
+    <string name="dc_dimming_title">Диммирование постоянным током</string>
+    <string name="dc_dimming_summary">Включите DC Dimming, чтобы избежать мерцания экрана при низких уровнях яркости</string>
+
+    <!-- HBM settings -->
+    <string name="hbm_settings_title">Режим высокой яркости</string>
+    <string name="hbm_settings_summary">Настройте режим высокой яркости, чтобы улучшить видимость под прямыми солнечными лучами</string>
+    <string name="hbm_mode_title">Режим высокой яркости</string>
+    <string name="hbm_mode_summary">Включить пиковую яркость</string>
+    <string name="auto_hbm_title">Автоматический режим высокой яркости</string>
+    <string name="auto_hbm_summary">Включить пиковую яркость в зависимости от солнечного света</string>
+    <string name="auto_hbm_threshold_title"></string>
+    <string name="auto_hbm_threshold_summary">порог (люкс)</string>
+    <string name="hbm_mode_warning">Длительное использование режима высокой яркости может повредить дисплей</string>
+
+    <string name="sound_title">Звук</string>
+
+    <!-- Audio amplification -->
+    <string name="audio_amplification_title">Усиление звука</string>
+    <string name="audio_amplification_summary">Настроить усиление звука для усиления звука</string>
+    <string name="headphone_gain">Усиление наушников</string>
+    <string name="microphone_gain">Усиление микрофона</string>
+    <string name="speaker_gain">Усиление динамика</string>
+
+    <!-- Clear speaker -->
+    <string name="clear_speaker_title">Чистый динамик</string>
+    <string name="clear_speaker_summary">Включите 30-секундный звук, чтобы очистить динамик</string>
+    <string name="clear_speaker_description">Запустите эту функцию один или два раза, если обнаружите, что динамик слегка забит пылью. Установите максимальную громкость мультимедиа.\n\nЕсли динамик сильно заблокирован, запустите эту функцию 2–5 раз, встряхивая устройство динамиком вниз.\n\nВНИМАНИЕ: убедитесь, что все наушники отключены.</string>
+
+    <!-- Haptic Level Settings -->
+    <string name="haptic_title">Тактильная обратная связь</string>
+    <string name="haptic_warning">Установка слишком высокого уровня тактильности может привести к необратимому повреждению оборудования, используйте на свой страх и риск</string>
+    <string name="haptic_summary">Настроить интенсивность вибрации</string>
+    <string name="haptic_level_title">Уровень</string>
+    <string name="haptic_level_summary">Интенсивность вибрации</string>
+    <string name="haptic_level_summary_inсовместимость">Ядро не поддерживает эту функцию</string>
+
+    <!-- Flashlight Brightness Settings -->
+    <string name="flashlight_title">Яркость фонарика</string>
+    <string name="flashlight_warning">Установка слишком высокой яркости фонарика может привести к необратимому повреждению оборудования, используйте на свой страх и риск</string>
+    <string name="flashlight_summary">Настроить значение яркости фонарика</string>
+    <string name="flashlight_brightness_title">Яркость</string>
+    <string name="flashlight_brightness_summary">Яркость фонарика</string>
+    <string name="flashlight_brightness_summary_inсовместимость">Ядро не поддерживает эту функцию</string>
+
+    <string name="power_title">Питание</string>
+    
+    <!-- Thermal Profiles -->
+    <string name="thermal_title">Тепловые профили</string>
+    <string name="thermal_summary">Настройте температурные и сенсорные профили для каждого приложения</string>
+    <string name="thermal_default">По умолчанию</string>
+    <string name="thermal_benchmark">Бенчмарк</string>
+    <string name="thermal_browser">Браузер</string>
+    <string name="thermal_camera">Камера</string>
+    <string name="thermal_dialer">Дозвонщик</string>
+    <string name="thermal_gaming">Игры</string>
+    <string name="thermal_navigation">Навигация</string>
+    <string name="thermal_streaming">Потоковая передача</string>
+    <string name="thermal_video">Видео</string>
+
+    <string name="touch_game_mode_title">Включить игровой режим</string>
+    <string name="touch_game_mode_summary">Активируйте ручное управление функциями сенсорного экрана и увеличьте производительность процессора и графического процессора</string>
+    <string name="touch_perf_level_title">Уровень производительности</string>
+    <string name="touch_perf_level_summary">Управление уровнем производительности процессора и графического процессора</string>
+    <string name="touch_response_title">Реакция на касание</string>
+    <string name="touch_response_summary">Управление реакцией на касание</string>
+    <string name="touch_sensitivity_title">Чувствительность к прикосновению</string>
+    <string name="touch_sensitivity_summary">Управление чувствительностью к повторным касаниям</string>
+    <string name="touch_resistent_title">Область, устойчивая к прикосновению</string>
+    <string name="touch_resistent_summary">Уменьшите чувствительность к касанию по краям, чтобы избежать срабатывания сенсорного управления</string>
+    
+    <!-- KProfiles -->
+    <string name="kprofiles_title">KProfiles</string>
+    <string name="kprofiles_summary">Управление профилями пространства ядра для достижения балансировки с точки зрения резервного питания и производительности</string>
+    <string name="kprofiles_auto_title">Использовать автоматические K-профили</string>
+    <string name="kprofiles_auto_summary">Автоматически переключаться в режим работы от батареи при выключении экрана устройства и возвращаться к профилю по умолчанию при включении экрана</string>
+    <string name="kprofiles_modes_title">Режимы KProfiles</string>
+    <string name="kprofiles_modes_none">Нет</string>
+    <string name="kprofiles_modes_battery">Батарея</string>
+    <string name="kprofiles_modes_balanced">Сбалансированный</string>
+    <string name="kprofiles_modes_Performance">Производительность</string>
+    <string name="kprofiles_not_supported">Ядро не поддерживает эту функцию</string>
+    <string name="kprofiles_modes_description"><xliff:g id="description">%s</xliff:g></string>
+    <string name="kprofiles_modes_none_description">Регулировать и управлять действиями внутри ядра с учетом профилей для достижения баланса с точки зрения резервного питания от батареи и производительности соответственно</string>
+    <string name="kprofiles_modes_battery_description">Режим работы от батареи:\nпропуск всех расширений пользовательского пространства и/или ядра, снижает частоту масштабирования графического процессора</string>
+    <string name="kprofiles_modes_balanced_description">Сбалансированный режим:\nСбалансирует баланс между режимами работы от батареи и производительности</string>
+    <string name="kprofiles_modes_Performance_description">Режим производительности:\nМаксимизировать все ускорения, увеличивает частоту масштабирования графического процессора до максимума</string>
+
+    <!-- Device Doze -->
+    <string name="ambient_display_title">Внешний дисплей</string>
+    <string name="ambient_display_summary">Включить Ambient Display и отключить жесты для пробуждения</string>
+
+    <!-- KCal -->
+    <string name="kcal_settings_title">Цвета дисплея</string>
+    <string name="kcal_settings_summary">Настройте цвет дисплея</string>
+    <string name="kcal_enable_title">Использовать собственный цвет отображения</string>
+    <string name="kcal_enable_summary">Настроить цвет дисплея с помощью собственных настроек</string>
+    <string name="kcal_not_supported">Настройки цвета дисплея не поддерживаются ядром</string>
+    <string name="kcal_rgb_preference_category_title">Настройки RGB</string>
+    <string name="kcal_Calibration_preference_category_title">Калибровка цвета</string>
+    <string name="saturation_slider_title">Насыщенность</string>
+    <string name="reset_default_button_title">Восстановить конфигурацию по умолчанию</string>
+    <string name="reset_default_button_summary">Сбросить все конфигурации этого экрана</string>
+    <string name="contrast_slider_title">Контраст</string>
+
+    <string name="color_profiles">Цветовые профили</string>
+    <string name="color_profile_default">По умолчанию</string>
+    <string name="color_profile_cold">Холодный</string>
+    <string name="color_profile_warm">Теплый</string>
+    <string name="color_profile_aturation">Насыщенный</string>
+
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">По умолчанию</string>
+    <string name="custom_seekbar_default_value_to_set">Значение по умолчанию: <xliff:g id="v">%s</xliff:g>\nДлительное нажатие для установки</string>
+    <string name="custom_seekbar_default_value_is_set">Установлено значение по умолчанию</string>
+
+    <!-- USB fastcharge -->
+    <string name="usb_fastcharge_title">Использовать быструю зарядку USB</string>
+    <string name="usb_fastcharge_summary">Зарядка до 900 мА при подключении к компьютеру через порт USB 3.0</string>
+</resources>
