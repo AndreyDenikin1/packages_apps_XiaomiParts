@@ -29,11 +29,10 @@ allow devicesettings_app system_app_data_file:{ file lnk_file } create_file_perm
 # Allow binder communication with gpuservice
 binder_call(devicesettings_app, gpuservice)
 
-# Allow devicesettings_app to read and write to cgroup/sysfs_leds/sysfs_thermal
+# Allow devicesettings_app to read and write to cgroup/sysfs_thermal
 allow devicesettings_app sysfs_leds:dir search;
 allow devicesettings_app {
     cgroup
-    sysfs_leds
     sysfs_thermal
 }:{ file lnk_file } rw_file_perms;
 
@@ -62,3 +61,5 @@ allow devicesettings_app init:unix_stream_socket connectto;
 
 # Allow DeviceSettings to set prop
 set_prop(devicesettings_app, system_prop)
+
+allow system_app sysfs_thermal:file w_file_perms;

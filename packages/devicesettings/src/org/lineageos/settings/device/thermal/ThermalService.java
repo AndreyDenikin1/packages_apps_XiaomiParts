@@ -16,6 +16,7 @@
 
 package org.lineageos.settings.device.thermal;
 
+import android.app.ActivityManager;
 import android.app.ActivityTaskManager;
 import android.app.TaskStackListener;
 import android.app.Service;
@@ -24,7 +25,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.res.Configuration;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
@@ -42,7 +42,6 @@ public class ThermalService extends Service {
         public void onReceive(Context context, Intent intent) {
             mPreviousApp = "";
             mThermalUtils.setDefaultThermalProfile();
-            mThermalUtils.resetTouchModes();
         }
     };
 

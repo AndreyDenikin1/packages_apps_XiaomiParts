@@ -16,132 +16,35 @@
     <string name="device_settings_title">Device Settings</string>
     <string name="device_settings_summary">Customize specific aspects of the device</string>
 
-    <!-- Refresh Rate Tile -->
-    <string name="refresh_rate_title">Refresh Rate</string>
-
-    <!-- FPS Counter -->
-    <string name="fps_info_title">FPS Counter</string>
-
-    <string name="display_title">Display</string>
-
     <!-- DC Dimming -->
     <string name="dc_dimming_title">DC Dimming</string>
     <string name="dc_dimming_summary">Enable DC Dimming to avoid screen flickering on low brightness levels</string>
 
-    <!-- HBM settings -->
-    <string name="hbm_settings_title">High brightness mode</string>
-    <string name="hbm_settings_summary">Configure high brightness mode to improve visibility in direct sunlight</string>
-    <string name="hbm_mode_title">High Brightness Mode</string>
-    <string name="hbm_mode_summary">Enable peak luminance</string>
-    <string name="auto_hbm_title">Automatic High Brightness Mode</string>
-    <string name="auto_hbm_summary">Enable peak luminance based on sunlight</string>
-    <string name="auto_hbm_threshold_title"></string>
-    <string name="auto_hbm_threshold_summary">threshold (lux)</string>
-    <string name="hbm_mode_warning">Long time usage of High brightness mode may damage your display</string>
-
     <string name="sound_title">Sound</string>
-
-    <!-- Audio amplification -->
-    <string name="audio_amplification_title">Audio Amplification</string>
-    <string name="audio_amplification_summary">Configure audio gain to amplifying sound</string>
-    <string name="headphone_gain">Headphone gain</string>
-    <string name="microphone_gain">Microphone gain</string>
-    <string name="speaker_gain">Speaker gain</string>
 
     <!-- Clear speaker -->
     <string name="clear_speaker_title">Clear speaker</string>
     <string name="clear_speaker_summary">Play a 30-second audio to clear the speaker</string>
     <string name="clear_speaker_description">Run this feature once or twice if you find that your speaker is lightly blocked by dust. Set media volume to maximum.\n\nIf the speaker is blocked heavily, run this feature 2-5 times while shaking your device with the speaker facing downwards.\n\nWARNING: Ensure that any headphones are unplugged.</string>
 
-     <!-- Haptic Level Settings -->
-     <string name="haptic_title">Haptic feedback</string>
-     <string name="haptic_warning">Setting-up haptic level too high may cause permanent hardware damage, use at your own risk</string>
-     <string name="haptic_summary">Customize vibration intensity</string>
-     <string name="haptic_level_title">Level</string>
-     <string name="haptic_level_summary">The amount of vibration intensity</string>
-     <string name="haptic_level_summary_incompatible">Kernel did not support this feature</string>
-
-    <!-- Flashlight Brightness Settings -->
-    <string name="flashlight_title">Flashlight brightness</string>
-    <string name="flashlight_warning">Setting-up flashlight brightness too high may cause permanent hardware damage, use at your own risk</string>
-    <string name="flashlight_summary">Customize flashlight brgitness value</string>
-    <string name="flashlight_brightness_title">Brightness</string>
-    <string name="flashlight_brightness_summary">The amount of brightness for flashlight</string>
-    <string name="flashlight_brightness_summary_incompatible">Kernel did not support this feature</string>
-
     <string name="power_title">Power</string>
     
     <!-- Thermal Profiles -->
-    <string name="thermal_title">Thermal Profiles</string>
-    <string name="thermal_summary">Adjust per-app thermal and touchscreen profiles</string>
+    <string name="thermal_title">Thermal Profiles and Game Mode</string>
+    <string name="thermal_summary">Adjust per-app thermal and touchscreen profiles for optimum performance</string>
     <string name="thermal_default">Default</string>
     <string name="thermal_benchmark">Benchmark</string>
     <string name="thermal_browser">Browser</string>
     <string name="thermal_camera">Camera</string>
     <string name="thermal_dialer">Dialer</string>
     <string name="thermal_gaming">Gaming</string>
-    <string name="thermal_navigation">Navigation</string>
     <string name="thermal_streaming">Streaming</string>
-    <string name="thermal_video">Video</string>
-
-    <string name="touch_game_mode_title">Enable game mode</string>
-    <string name="touch_game_mode_summary">Activate manual touchscreen feature controls and increase CPU and GPU performance</string>
-    <string name="touch_perf_level_title">Performance Level</string>
-    <string name="touch_perf_level_summary">Control CPU and GPU performance level</string>
-    <string name="touch_response_title">Touch response</string>
-    <string name="touch_response_summary">Control touch response</string>
-    <string name="touch_sensitivity_title">Touch sensitivity</string>
-    <string name="touch_sensitivity_summary">Control touch sensitivity for repeated taps</string>
-    <string name="touch_resistant_title">Touch-resistant area</string>
-    <string name="touch_resistant_summary">Reduce touch sensitivity near the edges to avoid triggering touch controls</string>
-    
-    <!-- KProfiles -->
-    <string name="kprofiles_title">KProfiles</string>
-    <string name="kprofiles_summary">Managing Kernelspace profiles to achieve balancing in terms of battery backup and performance</string>
-    <string name="kprofiles_auto_title">Use Auto KProfiles</string>
-    <string name="kprofiles_auto_summary">Automatically switch to battery mode when device screen turns off and back to default profile when screen turns on</string>
-    <string name="kprofiles_modes_title">KProfiles Modes</string>
-    <string name="kprofiles_modes_none">None</string>
-    <string name="kprofiles_modes_battery">Battery</string>
-    <string name="kprofiles_modes_balanced">Balanced</string>
-    <string name="kprofiles_modes_performance">Performance</string>
-    <string name="kprofiles_not_supported">Kernel did not support this feature</string>
-    <string name="kprofiles_modes_description"><xliff:g id="description">%s</xliff:g></string>
-    <string name="kprofiles_modes_none_description">Regulate and manage in-kernel activities in a profile-oriented manner to achieve balance in terms of battery backup and performance accordingly</string>
-    <string name="kprofiles_modes_battery_description">Battery Mode:\nSkip all userspace and/or in-kernel boosts, reduces gpu scaling frequency</string>
-    <string name="kprofiles_modes_balanced_description">Balanced Mode:\nTips the balance between battery and performance modes</string>
-    <string name="kprofiles_modes_performance_description">Performance Mode:\nMaximize all boosts, increases gpu scaling frequency to its max</string>
-
-    <!-- Device Doze -->
-	<string name="ambient_display_title">Ambient Display</string>
-    <string name="ambient_display_summary">Enable Ambient Display and doze wake-up gestures</string>
-
-    <!-- KCal -->
-    <string name="kcal_settings_title">Display colors</string>
-    <string name="kcal_settings_summary">Adjust the color of your display</string>
-    <string name="kcal_enable_title">Use custom display color</string>
-    <string name="kcal_enable_summary">Configure display color with custom adjustments</string>
-    <string name="kcal_not_supported">Display color settings is not supported by the kernel</string>
-    <string name="kcal_rgb_preference_category_title">RGB adjustments</string>
-    <string name="kcal_calibration_preference_category_title">Color calibration</string>
-    <string name="saturation_slider_title">Saturation</string>
-    <string name="reset_default_button_title">Reset to default configuration</string>
-    <string name="reset_default_button_summary">Reset all the configurations of this screen</string>
-    <string name="contrast_slider_title">Contrast</string>
-
-    <string name="color_profiles">Color profiles</string>
-    <string name="color_profile_default">Default</string>
-    <string name="color_profile_cold">Cold</string>
-    <string name="color_profile_warm">Warm</string>
-    <string name="color_profile_saturated">Saturated</string>
 
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">Default</string>
     <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong press to set</string>
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
-
-    <!-- USB fastcharge -->
-    <string name="usb_fastcharge_title">Use USB fastcharge</string>
-    <string name="usb_fastcharge_summary">Charge upto 900mA when connected to a computer via USB 3.0 port</string>
+    
+    <string name="display_title">Display</string>
 </resources>

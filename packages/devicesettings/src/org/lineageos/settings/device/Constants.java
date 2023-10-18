@@ -6,50 +6,10 @@ public class Constants {
     /* Intent Actions and Extras */
     public static final String ACTION_DCDIMMING_SETTING_CHANGED = "devicesettings.intent.action.dcdimming_setting_changed";
     public static final String DCDIMMING_STATE = "devicesettings.extra.dcdimming.STATE";
-    public static final String ACTION_HBM_SETTING_CHANGED = "devicesettings.intent.action.hbm_setting_changed";
-    public static final String HBM_STATE = "devicesettings.extra.hbm.STATE";
-    public static final String ACTION_KPROFILE_SETTING_CHANGED = "devicesettings.intent.action.kprofile_setting_changed";
-
-    /* Refresh Rate Tile */
-    public static final String KEY_MIN_REFRESH_RATE = "min_refresh_rate";
-    public static final String KEY_PEAK_REFRESH_RATE = "peak_refresh_rate";
 
     /* DC Dimming */
     public static final String KEY_DC_DIMMING = "pref_dc_dimming";
     public static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display/anti_flicker";
-
-    /* KProfiles */
-    public static final String KEY_KPROFILES_AUTO = "pref_kprofiles_auto";
-    public static final String KPROFILES_AUTO_NODE = "/sys/module/kprofiles/parameters/auto_kprofiles";
-    public static final String KEY_KPROFILES_MODES = "pref_kprofiles_modes";
-    public static final String KPROFILES_MODES_NODE = "/sys/module/kprofiles/parameters/kp_mode";
-    public static final String KPROFILES_MODES_INFO = "pref_kprofiles_modes_info";
-
-    /* Audio amplification */ 
-    public static final String KEY_HEADPHONE_GAIN = "headphone_gain";
-    public static final String HEADPHONE_GAIN_NODE = "/sys/kernel/sound_control/headphone_gain";
-    public static final String KEY_MICROPHONE_GAIN = "microphone_gain";
-    public static final String MICROPHONE_GAIN_NODE = "/sys/kernel/sound_control/mic_gain";
-    public static final String KEY_SPEAKER_GAIN = "speaker_gain";
-    public static final String SPEAKER_GAIN_NODE = "/sys/kernel/sound_control/speaker_gain";
-
-    /* Flashlight Brightness Settings */
-    public static final String KEY_FLASHLIGHT_BRIGHTNESS = "flashlight_brightness_pref";
-    public static final String FLASHLIGHT_BRIGHTNESS_NODE = "/sys/class/leds/led:torch_0/max_brightness";
-
-    public static final int FLASHLIGHT_MIN_BRIGHTNESS = 10; // Min(10), Max(200)
-    public static final int FLASHLIGHT_MAX_BRIGHTNESS = 200; // Min(10), Max(200)
-
-    /* FPS Counter */
-    public static final String KEY_FPS_INFO = "fps_info";
-    public static final String MEASURED_FPS_NODE = "/sys/class/drm/card0/sde-crtc-0/measured_fps";
-    
-    /* Haptic Level Settings */
-    public final static String KEY_HAPTIC_LEVEL = "haptic_level_pref";
-    public final static String HAPTIC_LEVEL_NODE = "/sys/devices/platform/soc/a8c000.i2c/i2c-2/2-005a/ulevel";
-
-    public final static int HAPTIC_MIN_LEVEL = 1;
-    public final static int HAPTIC_MAX_LEVEL = 128;
 
     /* Clear Speaker */
     public static final String KEY_CLEAR_SPEAKER = "clear_speaker_pref";
@@ -106,35 +66,6 @@ public class Constants {
     public static final String THERMAL_STREAMING = "thermal.streaming=";
     public static final String THERMAL_VIDEO = "thermal.video=";
 
-    /* KCal */
-    public static final String KEY_KCAL_ENABLE = "kcal_enable";
-    public static final String KEY_KCAL_RESET_DEFAULT = "reset_default_button";
-    public static final String KEY_KCAL_COLOR_PROFILES = "color_profiles";
-    public static final String KEY_KCAL_RED = "red_slider";
-    public static final String KEY_KCAL_GREEN = "green_slider";
-    public static final String KEY_KCAL_BLUE = "blue_slider";
-    public static final String KEY_KCAL_SATURATION = "saturation_slider";
-    public static final String KEY_KCAL_CONTRAST = "contrast_slider";
-
-    public static final String KCAL_ENABLE_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal_enable";
-    public static final String KCAL_RGB_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal";
-    public static final String KCAL_SATURATION_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal_sat";
-    public static final String KCAL_CONTRAST_NODE = "/sys/devices/platform/kcal_ctrl.0/kcal_cont";
-
-    /* Hight Brightness Mode */
-    public static final String KEY_HBM_SWITCH = "pref_hbm";
-    public static final String KEY_AUTO_HBM_SWITCH = "pref_auto_hbm";
-    public static final String KEY_AUTO_HBM_THRESHOLD = "pref_auto_hbm_threshold";
-    public static final int DELAY_MILLIS = 7000; // 7 seconds
-    public static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display/hbm";
-    public static final String BACKLIGHT_NODE = "/sys/class/backlight/panel0-backlight/brightness";
-
-    /* USB fastcharge */
-    public static final String KEY_USB_FASTCHARGE = "pref_usb_charge";
-    public static final String USB_FASTCHARGE_NODE = "/sys/kernel/fast_charge/force_fast_charge";
-
     /* Tile Entry Activity */
-    public static final String KPROFILES_MODES_TILE = "org.lineageos.settings.device.kprofiles.KProfilesModesTileService";
-    public static final String HBM_TILE = "org.lineageos.settings.device.hbm.HBMModeTileService";
     public static final String DCDIMMING_TILE = "org.lineageos.settings.device.DcDimmingTileService";
 }

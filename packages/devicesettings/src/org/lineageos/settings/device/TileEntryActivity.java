@@ -26,8 +26,6 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import org.lineageos.settings.device.Constants;
-import org.lineageos.settings.device.kprofiles.KProfilesSettingsActivity;
-import org.lineageos.settings.device.hbm.HBMActivity;
 import org.lineageos.settings.device.MainSettingsActivity;
 
 public class TileEntryActivity extends Activity {
@@ -38,12 +36,6 @@ public class TileEntryActivity extends Activity {
         super.onCreate(savedInstanceState);
         ComponentName sourceClass = getIntent().getParcelableExtra(Intent.EXTRA_COMPONENT_NAME);
         switch (sourceClass.getClassName()) {
-            case Constants.KPROFILES_MODES_TILE:
-                openActivitySafely(new Intent(this, KProfilesSettingsActivity.class));
-                break;
-            case Constants.HBM_TILE:
-                openActivitySafely(new Intent(this, HBMActivity.class));
-                break;
             case Constants.DCDIMMING_TILE:
                 openActivitySafely(new Intent(this, MainSettingsActivity.class));
                 break;

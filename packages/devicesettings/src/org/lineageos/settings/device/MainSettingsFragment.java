@@ -31,7 +31,6 @@ import androidx.preference.SwitchPreference;
 import org.lineageos.settings.device.Constants;
 import org.lineageos.settings.device.R;
 import org.lineageos.settings.device.utils.DisplayUtils;
-import org.lineageos.settings.device.utils.PowerUtils;
 
 public class MainSettingsFragment extends PreferenceFragment {
 
@@ -64,9 +63,7 @@ public class MainSettingsFragment extends PreferenceFragment {
         addPreferencesFromResource(R.xml.main_settings);
         mPrefDcDimming = (SwitchPreference) findPreference(Constants.KEY_DC_DIMMING);
         mPrefDcDimming.setOnPreferenceChangeListener(PrefListener);
-        mPrefUsbFastChg = (SwitchPreference) findPreference(Constants.KEY_USB_FASTCHARGE);
-        mPrefUsbFastChg.setOnPreferenceChangeListener(PrefListener);
-
+        
         final IntentFilter filter = new IntentFilter();
         filter.addAction(Constants.ACTION_DCDIMMING_SETTING_CHANGED);
         getContext().registerReceiver(stateReceiver, filter);
@@ -85,8 +82,6 @@ public class MainSettingsFragment extends PreferenceFragment {
                     intent.addFlags(Intent.FLAG_RECEIVER_REGISTERED_ONLY);
                     intent.putExtra(Constants.DCDIMMING_STATE, (boolean) value);
                     getContext().sendBroadcastAsUser(intent, UserHandle.CURRENT);
-                } else if (Constants.KEY_USB_FASTCHARGE.equals(key)) {
-                    PowerUtils.setUsbFastChgStatus((boolean) value);
                 }
 
                 return true;

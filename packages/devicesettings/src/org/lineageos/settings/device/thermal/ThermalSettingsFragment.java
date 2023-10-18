@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2020 The LineageOS Project
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -43,7 +43,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.android.settingslib.applications.ApplicationsState;
 
-import org.lineageos.settings.device.Constants;
 import org.lineageos.settings.device.R;
 
 import java.util.ArrayList;
@@ -85,7 +84,7 @@ public class ThermalSettingsFragment extends PreferenceFragment
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         return inflater.inflate(R.layout.thermal_layout, container, false);
     }
 
@@ -102,8 +101,7 @@ public class ThermalSettingsFragment extends PreferenceFragment
     @Override
     public void onResume() {
         super.onResume();
-        final ActionBar actionBar = getActivity().getActionBar();
-        actionBar.setTitle(getResources().getString(R.string.thermal_title));
+        getActivity().setTitle(getResources().getString(R.string.thermal_title));
         rebuild();
     }
 
@@ -197,23 +195,19 @@ public class ThermalSettingsFragment extends PreferenceFragment
 
     private int getStateDrawable(int state) {
         switch (state) {
-            case Constants.STATE_BENCHMARK:
+            case ThermalUtils.STATE_BENCHMARK:
                 return R.drawable.ic_thermal_benchmark;
-            case Constants.STATE_BROWSER:
+            case ThermalUtils.STATE_BROWSER:
                 return R.drawable.ic_thermal_browser;
-            case Constants.STATE_CAMERA:
+            case ThermalUtils.STATE_CAMERA:
                 return R.drawable.ic_thermal_camera;
-            case Constants.STATE_DIALER:
+            case ThermalUtils.STATE_DIALER:
                 return R.drawable.ic_thermal_dialer;
-            case Constants.STATE_GAMING:
+            case ThermalUtils.STATE_GAMING:
                 return R.drawable.ic_thermal_gaming;
-            case Constants.STATE_NAVIGATION:
-                return R.drawable.ic_thermal_navigation;
-            case Constants.STATE_STREAMING:
+            case ThermalUtils.STATE_STREAMING:
                 return R.drawable.ic_thermal_streaming;
-            case Constants.STATE_VIDEO:
-                return R.drawable.ic_thermal_video;
-            case Constants.STATE_DEFAULT:
+            case ThermalUtils.STATE_DEFAULT:
             default:
                 return R.drawable.ic_thermal_default;
         }
@@ -225,7 +219,6 @@ public class ThermalSettingsFragment extends PreferenceFragment
         private ImageView icon;
         private View rootView;
         private ImageView stateIcon;
-        private ImageView touchIcon;
 
         private ViewHolder(View view) {
             super(view);
@@ -233,7 +226,6 @@ public class ThermalSettingsFragment extends PreferenceFragment
             this.mode = view.findViewById(R.id.app_mode);
             this.icon = view.findViewById(R.id.app_icon);
             this.stateIcon = view.findViewById(R.id.state);
-            this.touchIcon = view.findViewById(R.id.touch);
             this.rootView = view;
 
             view.setTag(this);
@@ -250,9 +242,7 @@ public class ThermalSettingsFragment extends PreferenceFragment
                 R.string.thermal_camera,
                 R.string.thermal_dialer,
                 R.string.thermal_gaming,
-                R.string.thermal_navigation,
-                R.string.thermal_streaming,
-                R.string.thermal_video
+                R.string.thermal_streaming
         };
 
         private ModeAdapter(Context context) {
@@ -328,13 +318,6 @@ public class ThermalSettingsFragment extends PreferenceFragment
 
             holder.mode.setAdapter(new ModeAdapter(context));
             holder.mode.setOnItemSelectedListener(this);
-            holder.touchIcon.setOnClickListener(v -> {
-                Intent intent = new Intent(getActivity(), TouchSettingsActivity.class);
-                intent.putExtra("appName", entry.label);
-                intent.putExtra("packageName", entry.info.packageName);
-                startActivity(intent);
-            });
-
             holder.title.setText(entry.label);
             holder.title.setOnClickListener(v -> holder.mode.performClick());
             mApplicationsState.ensureIcon(entry);
@@ -342,17 +325,11 @@ public class ThermalSettingsFragment extends PreferenceFragment
             int packageState = mThermalUtils.getStateForPackage(entry.info.packageName);
             holder.mode.setSelection(packageState, false);
             holder.mode.setTag(entry);
-            if (packageState == Constants.STATE_BENCHMARK ||
-                packageState == Constants.STATE_GAMING) {
-                holder.touchIcon.setVisibility(View.VISIBLE);
-            } else {
-                holder.touchIcon.setVisibility(View.INVISIBLE);
-            }
             holder.stateIcon.setImageResource(getStateDrawable(packageState));
         }
 
         private void setEntries(List<ApplicationsState.AppEntry> entries,
-                List<String> sections, List<Integer> positions) {
+                                List<String> sections, List<Integer> positions) {
             mEntries = entries;
             mSections = sections.toArray(new String[sections.size()]);
             mPositions = new int[positions.size()];

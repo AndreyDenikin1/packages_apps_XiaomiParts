@@ -24,59 +24,12 @@
             android:title="@string/dc_dimming_title"
             android:summary="@string/dc_dimming_summary"
             android:icon="@drawable/ic_dc_dimming"/>
-
-        <Preference
-            android:icon="@drawable/ic_hbm"
-            android:title="@string/hbm_settings_title"
-            android:summary="@string/hbm_settings_summary">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.device.hbm.HBMActivity"
-                android:targetPackage="org.lineageos.settings.device" />
-        </Preference>
-
-        <Preference
-            android:icon="@drawable/ic_kcal"
-            android:title="@string/kcal_settings_title"
-            android:summary="@string/kcal_settings_summary">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.device.color.KcalSettingsActivity"
-                android:targetPackage="org.lineageos.settings.device" />
-        </Preference>
-
+        
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="power_category"
         android:title="@string/power_title">
-
-        <SwitchPreference
-            android:key="pref_usb_charge"
-            android:defaultValue="true"
-            android:title="@string/usb_fastcharge_title"
-            android:summary="@string/usb_fastcharge_summary"
-            android:icon="@drawable/ic_usb_fastcharge" />
-
-        <Preference
-            android:icon="@drawable/ic_flashlight"
-            android:title="@string/flashlight_title"
-            android:summary="@string/flashlight_summary">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.device.flashlight.FlashlightBrightnessActivity"
-                android:targetPackage="org.lineageos.settings.device" />
-        </Preference>
-
-        <Preference
-            android:icon="@drawable/ic_kprofiles"
-            android:title="@string/kprofiles_title"
-            android:summary="@string/kprofiles_summary">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.device.kprofiles.KProfilesSettingsActivity"
-                android:targetPackage="org.lineageos.settings.device" />
-        </Preference>
 
         <Preference
             android:icon="@drawable/ic_thermal"
@@ -88,33 +41,11 @@
                 android:targetPackage="org.lineageos.settings.device" />
         </Preference>
 
-        <Preference
-            android:key="device_doze"
-            android:persistent="false"
-            android:icon="@drawable/ic_ambient_display"
-            android:title="@string/ambient_display_title"
-            android:summary="@string/ambient_display_summary">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.doze.DozeSettingsActivity"
-                android:targetPackage="org.lineageos.settings.doze" />
-        </Preference>
-
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="sound_category"
         android:title="@string/sound_title">
-
-        <Preference
-            android:icon="@drawable/ic_audio_amplification"
-            android:title="@string/audio_amplification_title"
-            android:summary="@string/audio_amplification_summary">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.device.audioamplification.AudioAmplificationActivity"
-                android:targetPackage="org.lineageos.settings.device" />
-        </Preference>
 
         <Preference
             android:icon="@drawable/ic_clear_speaker"
@@ -123,16 +54,6 @@
             <intent
                 android:action="android.intent.action.MAIN"
                 android:targetClass="org.lineageos.settings.device.speaker.ClearSpeakerActivity"
-                android:targetPackage="org.lineageos.settings.device" />
-        </Preference>
-
-        <Preference
-            android:icon="@drawable/ic_phone_vibrate"
-            android:title="@string/haptic_title"
-            android:summary="@string/haptic_summary">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.device.haptic.HapticLevelActivity"
                 android:targetPackage="org.lineageos.settings.device" />
         </Preference>
 

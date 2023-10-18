@@ -28,17 +28,11 @@ import android.os.Handler;
 import android.util.Log;
 
 import androidx.preference.PreferenceManager;
-import org.lineageos.settings.device.flashlight.FlashlightUtils;
-import org.lineageos.settings.device.haptic.HapticUtils;
-import org.lineageos.settings.device.kprofiles.KProfilesUtils;
 import org.lineageos.settings.device.thermal.ThermalUtils;
-import org.lineageos.settings.device.audioamplification.AudioAmplificationUtils;
+
 
 import org.lineageos.settings.device.Constants;
-import org.lineageos.settings.device.utils.DisplayUtils;
 import org.lineageos.settings.device.utils.FileUtils;
-import org.lineageos.settings.device.utils.KcalUtils;
-import org.lineageos.settings.device.utils.PowerUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
@@ -49,18 +43,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 
-        DisplayUtils.enableHBMService(context);
-        DisplayUtils.setDcDimmingStatus(sharedPreferences.getBoolean(Constants.KEY_DC_DIMMING, false));
-        PowerUtils.setUsbFastChgStatus(sharedPreferences.getBoolean(Constants.KEY_USB_FASTCHARGE, false));
-        if (KcalUtils.isKcalSupported()) {
-            KcalUtils.writeCurrentSettings(sharedPreferences);
-        }
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
-        HapticUtils.restoreLevel(context);
-        FlashlightUtils.restoreBrightness(context);
         ThermalUtils.startService(context);
-        KProfilesUtils.restoreKProfiles(context);
-        AudioAmplificationUtils.restoreAudioAmplification(context);
     }
 }

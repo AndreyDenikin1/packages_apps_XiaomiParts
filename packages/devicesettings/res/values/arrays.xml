@@ -13,24 +13,4 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="color_profiles_names">
-        <item>@string/color_profile_default</item>
-        <item>@string/color_profile_cold</item>
-        <item>@string/color_profile_warm</item>
-        <item>@string/color_profile_saturated</item>
-    </string-array>
-
-    <string-array name="kprofiles_modes_pref_entries">
-        <item>@string/kprofiles_modes_none</item>
-        <item>@string/kprofiles_modes_battery</item>
-        <item>@string/kprofiles_modes_balanced</item>
-        <item>@string/kprofiles_modes_performance</item>
-    </string-array>
-
-    <string-array name="kprofiles_modes_pref_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </string-array>
 </resources>
